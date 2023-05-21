@@ -26,6 +26,7 @@ send.addEventListener("click", function(event) {
   chat.appendChild(query);
   
   const loading = document.createElement("p");
+  loading.id = "loading";
   loading.style.color = "lightgray";
   loading.style.fontSize = "14px";
   loading.innerHTML = "Loading...";
@@ -42,7 +43,13 @@ send.addEventListener("click", function(event) {
   .then(response => response.json())
   // Append the reply to #chat as a simple paragraph without any styling
   .then(data => {
-      console.log(data.answer);
+      console.log(data);
+
+      const loading = document.createElement("p");
+      loading.id = "loading";
+      loading.style.color = "lightgray";
+      loading.style.fontSize = "14px";
+      loading.innerHTML = "Done!";
       chat.removeChild(loading);
 
       const reply = document.createElement("p");
@@ -72,6 +79,12 @@ send.addEventListener("click", function(event) {
       });
     })
     .catch(error => {
+      
+      const loading = document.createElement("p");
+      loading.id = "loading";
+      loading.style.color = "lightgray";
+      loading.style.fontSize = "14px";
+      loading.innerHTML = "Loading...";
       chat.removeChild(loading);
       console.error(error);
     
