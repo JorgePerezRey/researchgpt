@@ -6,9 +6,7 @@ Try the demo at: https://www.dara.chat
 
 ## Example 
 
-
-![36814554-11CD-49FE-9339-C0691C49980E_1_105_c](https://github.com/mukulpatnaik/researchgpt/assets/36257370/af583c3c-cfe0-4d48-b965-c380a7e871bf)
-
+https://github.com/mukulpatnaik/researchgpt/assets/36257370/e94e2d19-6e7c-4897-9c0a-ef250101e8b4
 
 ## Installation
 
@@ -17,6 +15,7 @@ git clone https://github.com/mukulpatnaik/researchgpt.git
 cd researchgpt
 pip install -r requirements.txt
 ```
+
 
 ## Usage
 
