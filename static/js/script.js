@@ -45,11 +45,7 @@ send.addEventListener("click", function(event) {
   .then(data => {
       console.log(data);
 
-      const loading = document.createElement("p");
-      loading.id = "loading";
-      loading.style.color = "lightgray";
-      loading.style.fontSize = "14px";
-      loading.innerHTML = "Done!";
+      const loading = document.querySelector("#loading");
       chat.removeChild(loading);
 
       const reply = document.createElement("p");
@@ -79,15 +75,9 @@ send.addEventListener("click", function(event) {
       });
     })
     .catch(error => {
-      
-      const loading = document.createElement("p");
-      loading.id = "loading";
-      loading.style.color = "lightgray";
-      loading.style.fontSize = "14px";
-      loading.innerHTML = "Loading...";
-      chat.removeChild(loading);
-      console.error(error);
-    
+
+      console.log(error);
+          
       const errorMessage = document.createElement("p");
       errorMessage.style.color = "red";
       errorMessage.style.marginBottom = "0px";
@@ -96,6 +86,7 @@ send.addEventListener("click", function(event) {
       chat.appendChild(errorMessage);
       chat.scrollTop = chat.scrollHeight;
     });
+
   document.querySelector("input[name='chat']").value = "";
 });
 
