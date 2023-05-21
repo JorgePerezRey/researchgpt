@@ -1,9 +1,8 @@
-flask
+fastapi
 PyPDF2
 pandas
 openai
 requests
-flask-cors
 matplotlib
 scipy
 plotly
