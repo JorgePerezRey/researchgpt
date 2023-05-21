@@ -16,6 +16,19 @@ cd researchgpt
 pip install -r requirements.txt
 ```
 
+You also need redis for storing the embeddings locally on your machine. You can find installation instructions here: https://redis.io/docs/getting-started/installation/. To start the db, run the following command in your terminal.
+
+On MacOS:
+
+```bash
+redis-server
+```
+
+On Windows:
+
+```bash
+sudo service redis-server start
+```
 
 ## Usage
 
